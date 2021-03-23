@@ -1,0 +1,354 @@
+{
+    "name": "oauth_user",
+    "primary": "id",
+    "indexes": {
+        "oauth_user_username_unique": [
+            "username"
+        ]
+    },
+    "uniques": [
+        "id",
+        "email",
+        "username"
+    ],
+    "columns": {
+        "id": {
+            "name": "id",
+            "type": "bigint",
+            "default": null,
+            "notnull": true,
+            "length": null,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": true,
+            "autoincrement": true,
+            "columnDefinition": null,
+            "comment": null,
+            "unique": true,
+            "primary": true
+        },
+        "name": {
+            "name": "name",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 255,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "email": {
+            "name": "email",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 255,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8_unicode_ci",
+            "unique": true,
+            "primary": false
+        },
+        "username": {
+            "name": "username",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 60,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8_unicode_ci",
+            "unique": true,
+            "primary": false
+        },
+        "password": {
+            "name": "password",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 255,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "provider": {
+            "name": "provider",
+            "type": "string",
+            "default": "default",
+            "notnull": false,
+            "length": 255,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "provider_email": {
+            "name": "provider_email",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 255,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "provider_username": {
+            "name": "provider_username",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 255,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "provider_avatar": {
+            "name": "provider_avatar",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 255,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "provider_token": {
+            "name": "provider_token",
+            "type": "text",
+            "default": null,
+            "notnull": false,
+            "length": 65535,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "auth": {
+            "name": "auth",
+            "type": "string",
+            "default": "public",
+            "notnull": false,
+            "length": 255,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "branch": {
+            "name": "branch",
+            "type": "string",
+            "default": "default",
+            "notnull": false,
+            "length": 255,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "status": {
+            "name": "status",
+            "type": "string",
+            "default": "ACTIVE",
+            "notnull": true,
+            "length": 20,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "email_verified_at": {
+            "name": "email_verified_at",
+            "type": "datetime",
+            "default": null,
+            "notnull": false,
+            "length": null,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "unique": false,
+            "primary": false
+        },
+        "remember_token": {
+            "name": "remember_token",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 100,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "created_at": {
+            "name": "created_at",
+            "type": "datetime",
+            "default": null,
+            "notnull": false,
+            "length": null,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "unique": false,
+            "primary": false
+        },
+        "updated_at": {
+            "name": "updated_at",
+            "type": "datetime",
+            "default": null,
+            "notnull": false,
+            "length": null,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "unique": false,
+            "primary": false
+        }
+    },
+    "validation_rules": {
+        "name": [
+            "string"
+        ],
+        "email": [
+            "unique:oauth_user",
+            "string"
+        ],
+        "username": [
+            "unique:oauth_user",
+            "string"
+        ],
+        "password": [
+            "string"
+        ],
+        "provider": [
+            "string"
+        ],
+        "provider_email": [
+            "string"
+        ],
+        "provider_username": [
+            "string"
+        ],
+        "provider_avatar": [
+            "string"
+        ],
+        "provider_token": [
+            "string"
+        ],
+        "auth": [
+            "string"
+        ],
+        "branch": [
+            "string"
+        ],
+        "status": [
+            "required",
+            "string"
+        ],
+        "email_verified_at": [
+            "date_format:Y-m-d H:i:s"
+        ],
+        "remember_token": [
+            "string"
+        ],
+        "created_at": [
+            "date_format:Y-m-d H:i:s"
+        ],
+        "updated_at": [
+            "date_format:Y-m-d H:i:s"
+        ]
+    }
+}

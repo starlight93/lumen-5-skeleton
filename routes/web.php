@@ -12,5 +12,18 @@
 */
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    // return $router->app->version();
 });
+$router->get('/mail', "MailController@send");
+
+$router->get('/v1', "CrudController@index");
+$router->get('/v1/{table}', "CrudController@index");
+$router->post('/v1/{table}', "CrudController@index");
+$router->get('/v1/{table}/{id}', "CrudController@index");
+$router->put('/v1/{table}/{id}', "CrudController@index");
+$router->patch('/v1/{table}/{id}', "CrudController@index");
+$router->delete('/v1/{table}/{id}', "CrudController@index");
+
+
+
+$router->post('/login', "UserController@login");

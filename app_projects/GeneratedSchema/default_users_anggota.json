@@ -1,0 +1,1108 @@
+{
+    "name": "default_users_anggota",
+    "primary": "id",
+    "indexes": {
+        "default_users_anggota_induk_mahasiswa_unique": [
+            "induk_mahasiswa"
+        ]
+    },
+    "uniques": [
+        "id",
+        "nama_lengkap",
+        "email",
+        "induk_mahasiswa"
+    ],
+    "columns": {
+        "id": {
+            "name": "id",
+            "type": "bigint",
+            "default": null,
+            "notnull": true,
+            "length": null,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": true,
+            "autoincrement": true,
+            "columnDefinition": null,
+            "comment": "{\"src\":\"default_users.id\"}",
+            "unique": true,
+            "primary": true
+        },
+        "nama_ayah": {
+            "name": "nama_ayah",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 150,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "nama_ibu": {
+            "name": "nama_ibu",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 150,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "nama_lengkap": {
+            "name": "nama_lengkap",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 150,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": true,
+            "primary": false
+        },
+        "nama_panggilan": {
+            "name": "nama_panggilan",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 100,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "kota_lahir": {
+            "name": "kota_lahir",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 100,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "jenis_kelamin": {
+            "name": "jenis_kelamin",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 15,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "tanggal_lahir": {
+            "name": "tanggal_lahir",
+            "type": "date",
+            "default": null,
+            "notnull": false,
+            "length": null,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "unique": false,
+            "primary": false
+        },
+        "email": {
+            "name": "email",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": true,
+            "primary": false
+        },
+        "telepon": {
+            "name": "telepon",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "whatsapp": {
+            "name": "whatsapp",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "telegram": {
+            "name": "telegram",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "instagram": {
+            "name": "instagram",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "twitter": {
+            "name": "twitter",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "facebook": {
+            "name": "facebook",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "ktp": {
+            "name": "ktp",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "sim": {
+            "name": "sim",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "induk_mahasiswa": {
+            "name": "induk_mahasiswa",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": true,
+            "primary": false
+        },
+        "nomor_anggota": {
+            "name": "nomor_anggota",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "url_foto_profil": {
+            "name": "url_foto_profil",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "url_foto_resmi": {
+            "name": "url_foto_resmi",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "url_foto_mahasiswa": {
+            "name": "url_foto_mahasiswa",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "url_foto_ktp": {
+            "name": "url_foto_ktp",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "url_foto_kartu_mahasiswa": {
+            "name": "url_foto_kartu_mahasiswa",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "alamat_lengkap": {
+            "name": "alamat_lengkap",
+            "type": "text",
+            "default": null,
+            "notnull": false,
+            "length": 65535,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "alamat_kelurahan": {
+            "name": "alamat_kelurahan",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "alamat_kota": {
+            "name": "alamat_kota",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "alamat_provinsi": {
+            "name": "alamat_provinsi",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "universitas": {
+            "name": "universitas",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "fakultas": {
+            "name": "fakultas",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "jurusan": {
+            "name": "jurusan",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "prodi": {
+            "name": "prodi",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "tahun_masuk": {
+            "name": "tahun_masuk",
+            "type": "date",
+            "default": null,
+            "notnull": false,
+            "length": null,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "unique": false,
+            "primary": false
+        },
+        "tahun_keluar": {
+            "name": "tahun_keluar",
+            "type": "date",
+            "default": null,
+            "notnull": false,
+            "length": null,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "unique": false,
+            "primary": false
+        },
+        "tahun_lulus": {
+            "name": "tahun_lulus",
+            "type": "date",
+            "default": null,
+            "notnull": false,
+            "length": null,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "unique": false,
+            "primary": false
+        },
+        "status_kuliah": {
+            "name": "status_kuliah",
+            "type": "string",
+            "default": "aktif",
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "status_anggota": {
+            "name": "status_anggota",
+            "type": "string",
+            "default": "partisipan",
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "status_perkawinan": {
+            "name": "status_perkawinan",
+            "type": "string",
+            "default": "belum_nikah",
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "alasan_daftar": {
+            "name": "alasan_daftar",
+            "type": "text",
+            "default": null,
+            "notnull": false,
+            "length": 65535,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "note": {
+            "name": "note",
+            "type": "text",
+            "default": null,
+            "notnull": false,
+            "length": 65535,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "finansial_min": {
+            "name": "finansial_min",
+            "type": "decimal",
+            "default": "0.00",
+            "notnull": false,
+            "length": null,
+            "precision": 18,
+            "scale": 2,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "unique": false,
+            "primary": false
+        },
+        "finansial_max": {
+            "name": "finansial_max",
+            "type": "decimal",
+            "default": "0.00",
+            "notnull": false,
+            "length": null,
+            "precision": 18,
+            "scale": 2,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "unique": false,
+            "primary": false
+        },
+        "ipk_terakhir": {
+            "name": "ipk_terakhir",
+            "type": "decimal",
+            "default": "2.00",
+            "notnull": false,
+            "length": null,
+            "precision": 18,
+            "scale": 2,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "unique": false,
+            "primary": false
+        },
+        "pernah_nyantren": {
+            "name": "pernah_nyantren",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "beasiswa": {
+            "name": "beasiswa",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "asal_sekolah_jenis": {
+            "name": "asal_sekolah_jenis",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "referal": {
+            "name": "referal",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "created_at": {
+            "name": "created_at",
+            "type": "datetime",
+            "default": null,
+            "notnull": false,
+            "length": null,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "unique": false,
+            "primary": false
+        },
+        "updated_at": {
+            "name": "updated_at",
+            "type": "datetime",
+            "default": null,
+            "notnull": false,
+            "length": null,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "unique": false,
+            "primary": false
+        },
+        "alamat_tinggal": {
+            "name": "alamat_tinggal",
+            "type": "text",
+            "default": null,
+            "notnull": false,
+            "length": 65535,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "lama_nyantri": {
+            "name": "lama_nyantri",
+            "type": "integer",
+            "default": null,
+            "notnull": false,
+            "length": null,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "unique": false,
+            "primary": false
+        },
+        "asal_sekolah": {
+            "name": "asal_sekolah",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "hobi": {
+            "name": "hobi",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "alasan_mengenal_kmnu": {
+            "name": "alasan_mengenal_kmnu",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        },
+        "tentang_nu": {
+            "name": "tentang_nu",
+            "type": "string",
+            "default": null,
+            "notnull": false,
+            "length": 191,
+            "precision": 10,
+            "scale": 0,
+            "fixed": false,
+            "unsigned": false,
+            "autoincrement": false,
+            "columnDefinition": null,
+            "comment": null,
+            "collation": "utf8mb4_unicode_ci",
+            "unique": false,
+            "primary": false
+        }
+    },
+    "validation_rules": {
+        "nama_ayah": [
+            "string"
+        ],
+        "nama_ibu": [
+            "string"
+        ],
+        "nama_lengkap": [
+            "unique:default_users_anggota",
+            "string"
+        ],
+        "nama_panggilan": [
+            "string"
+        ],
+        "kota_lahir": [
+            "string"
+        ],
+        "jenis_kelamin": [
+            "string"
+        ],
+        "tanggal_lahir": [
+            "date"
+        ],
+        "email": [
+            "unique:default_users_anggota",
+            "string"
+        ],
+        "telepon": [
+            "string"
+        ],
+        "whatsapp": [
+            "string"
+        ],
+        "telegram": [
+            "string"
+        ],
+        "instagram": [
+            "string"
+        ],
+        "twitter": [
+            "string"
+        ],
+        "facebook": [
+            "string"
+        ],
+        "ktp": [
+            "string"
+        ],
+        "sim": [
+            "string"
+        ],
+        "induk_mahasiswa": [
+            "unique:default_users_anggota",
+            "string"
+        ],
+        "nomor_anggota": [
+            "string"
+        ],
+        "url_foto_profil": [
+            "string"
+        ],
+        "url_foto_resmi": [
+            "string"
+        ],
+        "url_foto_mahasiswa": [
+            "string"
+        ],
+        "url_foto_ktp": [
+            "string"
+        ],
+        "url_foto_kartu_mahasiswa": [
+            "string"
+        ],
+        "alamat_lengkap": [
+            "string"
+        ],
+        "alamat_kelurahan": [
+            "string"
+        ],
+        "alamat_kota": [
+            "string"
+        ],
+        "alamat_provinsi": [
+            "string"
+        ],
+        "universitas": [
+            "string"
+        ],
+        "fakultas": [
+            "string"
+        ],
+        "jurusan": [
+            "string"
+        ],
+        "prodi": [
+            "string"
+        ],
+        "tahun_masuk": [
+            "date"
+        ],
+        "tahun_keluar": [
+            "date"
+        ],
+        "tahun_lulus": [
+            "date"
+        ],
+        "status_kuliah": [
+            "string"
+        ],
+        "status_anggota": [
+            "string"
+        ],
+        "status_perkawinan": [
+            "string"
+        ],
+        "alasan_daftar": [
+            "string"
+        ],
+        "note": [
+            "string"
+        ],
+        "finansial_min": [
+            "numeric"
+        ],
+        "finansial_max": [
+            "numeric"
+        ],
+        "ipk_terakhir": [
+            "numeric"
+        ],
+        "pernah_nyantren": [
+            "string"
+        ],
+        "beasiswa": [
+            "string"
+        ],
+        "asal_sekolah_jenis": [
+            "string"
+        ],
+        "referal": [
+            "string"
+        ],
+        "created_at": [
+            "date_format:Y-m-d H:i:s"
+        ],
+        "updated_at": [
+            "date_format:Y-m-d H:i:s"
+        ],
+        "alamat_tinggal": [
+            "string"
+        ],
+        "lama_nyantri": [
+            "string"
+        ],
+        "asal_sekolah": [
+            "string"
+        ],
+        "hobi": [
+            "string"
+        ],
+        "alasan_mengenal_kmnu": [
+            "string"
+        ],
+        "tentang_nu": [
+            "string"
+        ]
+    }
+}

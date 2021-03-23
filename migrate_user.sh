@@ -1,0 +1,1 @@
+php7.0 artisan migrate:refresh --path=database/migrations/users
