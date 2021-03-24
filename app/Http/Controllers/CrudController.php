@@ -13,7 +13,6 @@ class CrudController extends Controller
         //
     }
     public function index( Request $r, $table = null, $id = null ){
-        return (array) $r->user();
         if( $r->method()=='GET' && $table===null){
             $tables = DB::connection()->getDoctrineSchemaManager()->listTableNames();
             return [
