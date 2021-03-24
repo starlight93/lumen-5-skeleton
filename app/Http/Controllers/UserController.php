@@ -17,6 +17,7 @@ class UserController extends Controller
         
         if ($validator->fails()) {
             return response()->json( [
+                "code"=>401,
                 "message"=> $validator->errors()
             ], 401 );
         }
@@ -28,11 +29,13 @@ class UserController extends Controller
 
         if(!$data){
             return response()->json( [
+                "code"=>401,
                 "message" => "user does not exist"
             ],401 );
         }
         if (!Hash::check($request->password, $data->password)) {
             return response()->json( [
+                "code"=>401,
                 "message" => "wrong password"
             ],401 );
         }
@@ -41,11 +44,26 @@ class UserController extends Controller
         \DB::table ( "oauth_user_token" )->insert([
             "oauth_user_id" => $data->id,
             "token"=> $generatedToken,
-            "logged_in_at"=>Carbon::now()
+            "logged_in_at"=>Carbon::now(),
+            "created_at"=>Carbon::now(),
+            "updated_at"=>Carbon::now()
         ]);
         return array_merge( ( array ) $data,[
             "token" => $generatedToken,
             "type" => "custom"
+        ]);
+    }
+    
+    public function logout( Request $request ){
+        \DB::table ( "oauth_user_token" )
+            ->where("token", $request->user()->authorization)
+            ->update([
+                "logged_out_at"=>Carbon::now(),
+                "updated_at"=>Carbon::now()
+            ]);
+        return response()->json( [
+            "code"=>200,
+            "message" => "You have logged out successfully"
         ]);
     }
 }
