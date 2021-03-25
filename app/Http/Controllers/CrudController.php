@@ -8,30 +8,10 @@ use Illuminate\Support\Carbon;
 
 class CrudController extends Controller
 {
-    public function __construct()
-    {
-        //
-    }
-    public function index( Request $r, $table = null, $id = null ){
-        if( $r->method()=='GET' && $table===null){
-            $tables = DB::connection()->getDoctrineSchemaManager()->listTableNames();
-            return [
-                "resources" => array_values( array_filter( $tables, function($dt) { 
-                    return strpos($dt , 'oauth') === false && !in_array( $dt, [
-                        "migrations"
-                    ]);
-                } ) )
-            ];
-        }
-        
-        if ( !Schema::hasTable( $table ) ){
-            abort(404, json_encode([
-                "code"=>404,
-                "message"=>"resource $table does not exist"
-            ]));
-        }else{
-            $q = DB::table( $table );
-        }
+
+    public function index( Request $r, $table = null, $id = null )
+    {        
+        $q = DB::table( $table );
         switch( strtolower( $r->method() ) ){
             case "post":
                 $id = $q->insertGetId( array_merge( $r->all(), [

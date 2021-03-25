@@ -65,6 +65,14 @@ $app->singleton(
 
 $app->routeMiddleware([
     'auth' => App\Http\Middleware\Authenticate::class,
+    'check_exist' => App\Http\CrudMiddleware\CheckExist::class,
+    'check_role' => App\Http\CrudMiddleware\CheckRole::class,
+    'create_validation' => App\Http\CrudMiddleware\CreateValidation::class,
+    'update_validation' => App\Http\CrudMiddleware\UpdateValidation::class,
+    'delete_validation' => App\Http\CrudMiddleware\DeleteValidation::class,
+    'read_validation' => App\Http\CrudMiddleware\ReadValidation::class,
+    'merge_create' => App\Http\CrudMiddleware\MergeOnCreate::class,
+    'merge_update' => App\Http\CrudMiddleware\MergeOnUpdate::class,
 ]);
 
 /*
