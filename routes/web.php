@@ -1,5 +1,4 @@
 <?php
-
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
@@ -31,6 +30,9 @@ $router->group(['prefix'=>'v1','middleware' => ['auth']], function () use ($rout
 });
 
 $router->post('/login', "UserController@login");
+$router->post('/password-recovery', "UserController@passwordRecovery");
+$router->post('/password-reset-check', "UserController@passwordResetCheck");
+$router->post('/password-reset', "UserController@passwordReset");
 
 $router->group(['middleware' => 'auth'], function () use ($router) {
     $router->get('/logout', "UserController@logout");

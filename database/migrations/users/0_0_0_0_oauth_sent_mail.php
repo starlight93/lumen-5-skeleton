@@ -15,6 +15,7 @@ class OauthSentMail extends Migration
             $table->bigInteger('oauth_user_id')->nullable();
             $table->string('email')->nullable();
             $table->string('subject')->nullable();
+            $table->text('info')->nullable();
             $table->string('status')->nullable()->default("sending");
             $table->timestamps();
         });

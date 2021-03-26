@@ -1,46 +1,59 @@
 <?php
 
 namespace App\Http\Controllers;
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
+use Illuminate\Support\Carbon;
 
-class MailController extends Controller
+class MailController
 {
-    public function send(){
-        $mail = new PHPMailer(true);
-        try {
-            //Server settings
-            $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-            $mail->isSMTP();                                            //Send using SMTP
-            $mail->Host       = env('MAIL_HOST','smtp.gmail.com');                     //Set the SMTP server to send through
-            $mail->SMTPAuth   = true; //Enable SMTP authentication
-            $mail->Username   = env('MAIL_USERNAME');                     //SMTP username
-            $mail->Password   = env('MAIL_PASSWORD');                               //SMTP password
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-            $mail->Port       = env('MAIL_PORT',587);                                    //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+    public function send($to,$to_name, $subject,$body,$bodyAlt)
+    {
+        $id=null;
+        try{
 
-            //Recipients
-            $mail->setFrom(env('MAIL_FROM','lumen@localhost.app'), env('MAIL_FROM_NAME','LUMEN APP'));
-            $mail->addAddress('mail.firmansyah93@gmail.com', 'Fajar Firmansyah');     //Add a recipient
-            // $mail->addReplyTo('info@example.com', 'Information');
-            // $mail->addCC('cc@example.com');
-            // $mail->addBCC('bcc@example.com');
+            $transport = (new \Swift_SmtpTransport('smtp.gmail.com',env('MAIL_PORT',465),'tls'))
+            ->setUsername(env('MAIL_USERNAME'))
+            ->setPassword(env('MAIL_PASSWORD'))
+            ;
 
-            //Attachments
-            // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
-            // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
+            // Create the Mailer using your created Transport
+            $mailer = new \Swift_Mailer($transport);
 
-            //Content
-            $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'Here is the subject';
-            $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-            $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
-            $mail->send();
-            return 'Message has been sent';
-        } catch (Exception $e) {
-            return "Message could not be sent. Error info {$e->getMessage()} Mailer Error: {$mail->ErrorInfo}";
+            // Create a message
+            $message = (new \Swift_Message($subject))
+                ->setFrom([env('MAIL_FROM','lumen@localhost.app') => env('MAIL_FROM_NAME','LUMEN APP')])
+                ->setTo([$to => 'we'.$to_name])
+                ->setBody($body,'text/html')
+                ->addPart($bodyAlt,'text/plain')
+                ;
+            $id = \DB::table('oauth_sent_mail')->insertGetId([
+                "email"=>$to,
+                "subject"=>$subject,
+                "created_at"=>Carbon::now(),
+                "updated_at"=>Carbon::now(),
+            ]);
+            // Send the message
+            $result = $mailer->send($message);
+            if($result){
+                \DB::table('oauth_sent_mail')->where( "id", $id )->update([
+                    "status"=>"sent",
+                    "updated_at"=>Carbon::now(),
+                ]);
+                return true;
+            }else{
+                \DB::table('oauth_sent_mail')->where( "id", $id )->update([
+                    "status"=>"failed",
+                    "info"=>"email destination maybe not exist",
+                    "updated_at"=>Carbon::now(),
+                ]);
+                return "Error happened when trying to send to your email, Please Contact Administrator";
+            }
+        }catch(\Exception $e){
+            \DB::table('oauth_sent_mail')->where( "id", $id )->update([
+                "status"=>"failed",
+                "info"=>$e->getMessage(),
+                "updated_at"=>Carbon::now(),
+            ]);
+            return $e->getMessage();
         }
     }
 }
